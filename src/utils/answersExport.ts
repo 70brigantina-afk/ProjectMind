@@ -69,8 +69,12 @@ export function downloadTextFile(content: string, filename: string): void {
   const link = document.createElement('a');
   link.href = url;
   link.download = filename;
+  link.rel = 'noopener';
+  link.style.display = 'none';
+  document.body.appendChild(link);
   link.click();
-  URL.revokeObjectURL(url);
+  document.body.removeChild(link);
+  window.setTimeout(() => URL.revokeObjectURL(url), 200);
 }
 
 /** Ссылка на диагностику внутри рабочего пространства (HashRouter + GitHub Pages). */

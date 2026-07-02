@@ -140,16 +140,17 @@ export function ClientDiagnosticPage() {
           </p>
 
           <Card>
-            <p style={{ marginBottom: '1rem', fontSize: '0.9375rem', lineHeight: 1.6 }}>
-              Все ответы сохранены в этом браузере. Вы можете скопировать их одним текстом или
-              скачать файл TXT.
+            <p style={{ marginBottom: '0.5rem', fontSize: '0.9375rem', lineHeight: 1.6 }}>
+              Все ответы сохранены в этом браузере. Выберите действие:
             </p>
-            <div className="actions-row">
-              <Button onClick={handleCopyAll}>Скопировать все ответы</Button>
-              <Button variant="secondary" onClick={handleDownload}>
+            <div className="completion-actions">
+              <Button type="button" fullWidth onClick={handleCopyAll}>
+                Скопировать все ответы
+              </Button>
+              <Button type="button" fullWidth variant="secondary" onClick={handleDownload}>
                 Скачать ответы в TXT
               </Button>
-              <Button variant="ghost" onClick={handleRestart}>
+              <Button type="button" fullWidth variant="ghost" onClick={handleRestart}>
                 Начать заново
               </Button>
             </div>
