@@ -1,0 +1,33 @@
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.draft {
+  background: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+}
+
+.started {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.completed {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.ready {
+  background: rgba(61, 79, 124, 0.18);
+  color: var(--color-primary-hover);
+}
+
+.inProgress {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
