@@ -5,11 +5,11 @@
   "type": "module",
   "homepage": "https://70brigantina-afk.github.io/ProjectMind",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "dev": "vite index.dev.html",
+    "build": "tsc --noEmit && vite build && node scripts/sync-pages-root.mjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --no-history"
   },
   "dependencies": {
     "react": "^19.0.0",
