@@ -8,6 +8,7 @@ import { DiagnosticPage } from './pages/DiagnosticPage';
 import { AnswersPage } from './pages/AnswersPage';
 import { AiAnalysisPage } from './pages/AiAnalysisPage';
 import { ClientDiagnosticPage } from './pages/ClientDiagnosticPage';
+import { MarinaStormPage } from './pages/MarinaStormPage';
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/marina-storm" element={<MarinaStormPage />} />
         <Route path="/client-diagnostic" element={<ClientDiagnosticPage />} />
         <Route path="/workspaces" element={<WorkspacesPage />} />
         <Route path="/workspaces/new" element={<CreateWorkspacePage />} />
